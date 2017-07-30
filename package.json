@@ -1,0 +1,32 @@
+{
+  "name": "secret-agent",
+  "version": "1.0.0",
+  "description": "Secret agent is in the isolated country nearby, where exactly ?",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start:logs": "pm2 logs",
+    "start:run": "pm2 start ecosystem.config.js",
+    "start": "npm-run-all --parallel start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danfromisrael/secret-agent.git"
+  },
+  "author": "Dan Mordechay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danfromisrael/secret-agent/issues"
+  },
+  "homepage": "https://github.com/danfromisrael/secret-agent#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "helmet": "^3.8.1",
+    "joi": "^10.6.0",
+    "lodash": "^4.17.4",
+    "npm-run-all": "^4.0.2",
+    "pm2": "^2.6.1",
+    "winston": "^2.3.1"
+  }
+}
