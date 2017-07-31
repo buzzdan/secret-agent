@@ -1,5 +1,5 @@
 'use strict';
-const _ = require('lodash')
+const _ = require('lodash');
 
 const agentsByCountries = log => _(log)
     .groupBy(record => record.country)

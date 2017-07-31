@@ -1,12 +1,14 @@
 'use strict';
+const distanceService = require('./distance-service');
 const dao = require('./../data-access/countries');
-const { getDistances } = require('../data-access/distance-api');
 
 const findClosest = (req, res) => {
     const target = req.body["target-location"];
-    getDistances(target, ['new york', 'barcelona']).then(result => {
-        res.status(200).send(result).end();
-    });
+    dao.getCountries()
+        .then(destinations => distanceService.findClosest(target, destinations))
+        .then(results => {
+            res.status(200).send(results).end();
+        });
 }
 
 module.exports = { findClosest };

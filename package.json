@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/danfromisrael/secret-agent#readme",
   "dependencies": {
+    "@google/maps": "^0.4.3",
     "body-parser": "^1.17.2",
     "dotenv-safe": "^4.0.4",
     "express": "^4.15.3",
@@ -30,6 +31,7 @@
     "pm2": "^2.6.1",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4",
+    "spherical-geometry-js": "^1.0.1",
     "winston": "^2.3.1"
   }
 }

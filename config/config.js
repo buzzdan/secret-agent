@@ -11,7 +11,7 @@ const envVarsSchema = joi.object({
   PORT: joi.number()
     // .required(),
     .default('3000'),
-  GOOGLE_API_KEY: joi.string()
+  GEOCODE_API_KEY: joi.string()
     .required(),
   LOGGER_LEVEL: joi.string()
     .allow(['error', 'warn', 'info', 'debug'])
@@ -34,7 +34,6 @@ const config = {
   env: envVars.NODE_ENV,
   isTest: envVars.NODE_ENV === 'test',
   isDevelopment: envVars.NODE_ENV === 'development',
-  googleApiKey: envVars.GOOGLE_API_KEY,
   logger: {
     level: envVars.LOGGER_LEVEL,
     enabled: envVars.LOGGER_ENABLED
