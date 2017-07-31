@@ -7,7 +7,8 @@
     "test": "mocha",
     "start:logs": "pm2 logs",
     "start:run": "pm2 start ecosystem.config.js",
-    "start": "npm-run-all --parallel start:*"
+    "start": "npm-run-all --parallel start:*",
+    "setup": "node ./scripts/db-setup.js"
   },
   "repository": {
     "type": "git",
