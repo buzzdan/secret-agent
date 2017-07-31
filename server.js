@@ -8,6 +8,11 @@ const helmet = require('helmet');
 const logger = require('winston');
 const routes = require('./app');
 
+var mongoose = require('mongoose');
+
+//DB setup
+mongoose.connect('mongodb://mongo:27017');
+
 configLogger(config.env,config.logger.level)
 
 const app = express();
