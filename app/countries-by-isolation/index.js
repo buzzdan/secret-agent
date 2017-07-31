@@ -1,6 +1,5 @@
 'use strict';
-const express = require('express')
-const router = express.Router();
+
 const dao = require('./../data-access/countries');
 const {
     getMaxIsolationLevel,

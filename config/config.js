@@ -2,7 +2,8 @@
 
 const joi = require('joi')
 
-const envVarsSchema = joi.object({  
+require('dotenv-safe').load();
+const envVarsSchema = joi.object({
   NODE_ENV: joi.string()
     .allow(['development', 'production', 'test', 'provision'])
     // .required(),
@@ -10,6 +11,8 @@ const envVarsSchema = joi.object({
   PORT: joi.number()
     // .required(),
     .default('3000'),
+  GOOGLE_API_KEY: joi.string()
+    .required(),
   LOGGER_LEVEL: joi.string()
     .allow(['error', 'warn', 'info', 'debug'])
     .default('info'),
@@ -22,15 +25,16 @@ const envVarsSchema = joi.object({
 }).unknown()
   .required()
 
-const { error, value: envVars } = joi.validate(process.env, envVarsSchema)  
-if (error) {  
+const { error, value: envVars } = joi.validate(process.env, envVarsSchema)
+if (error) {
   throw new Error(`Config validation error: ${error.message}`)
 }
 
-const config = {  
+const config = {
   env: envVars.NODE_ENV,
   isTest: envVars.NODE_ENV === 'test',
   isDevelopment: envVars.NODE_ENV === 'development',
+  googleApiKey: envVars.GOOGLE_API_KEY,
   logger: {
     level: envVars.LOGGER_LEVEL,
     enabled: envVars.LOGGER_ENABLED

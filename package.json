@@ -21,12 +21,15 @@
   "homepage": "https://github.com/danfromisrael/secret-agent#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv-safe": "^4.0.4",
     "express": "^4.15.3",
     "helmet": "^3.8.1",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
     "npm-run-all": "^4.0.2",
     "pm2": "^2.6.1",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
     "winston": "^2.3.1"
   }
 }
