@@ -35,3 +35,10 @@ For Development:
 * Will activate shared volume of host directory inside the container
 * Watches the files as development takes place
 * Server restarts for each change
+
+Wanna just compose it and bash into the container without starting the service ?
+you got it!
+
+`docker-compose -f docker-compose.dev.yml run web bash`
+
+just go in there and do whatever you feel like -> you got full control
