@@ -7,7 +7,7 @@ Good morning, agent. MI6 is trying to gather statistics about its missions. Yo
 
 An isolated agent is defined as an agent that participated in a single mission.this endpoint will find the most isolated country (the country with the highest degree of isolation).
 
-For the sample input (see db-setup script) input:
+For the sample input (see [db-setup script](https://github.com/danfromisrael/secret-agent/blob/master/scripts/db-setup.js)) input:
 
 - Brazil has 1 isolated agent (008) and 2 non-isolated agents (007, 005)
 - Poland has 2 isolated agents (011, 013) and one non-isolated agent (005)
