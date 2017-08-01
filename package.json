@@ -2,12 +2,13 @@
   "name": "secret-agent",
   "version": "1.0.0",
   "description": "Secret agent is in the isolated country nearby, where exactly ?",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha",
     "start:logs": "pm2 logs",
     "start:run": "pm2 start ecosystem.config.js",
     "start": "npm-run-all --parallel start:*",
+    "stop": "pm2 delete all",
     "setup": "node ./scripts/db-setup.js"
   },
   "repository": {

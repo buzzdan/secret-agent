@@ -4,10 +4,10 @@ module.exports = {
   apps: [
     {
       name: 'api',
-      script: 'server.js',
+      script: 'index.js',
       max_restarts: 4,
       node_args: "--inspect=5859",
-      watch: ["./app/**/*.js", "server.js"]
+      watch: ['app','config'],
     }
   ]
  };

@@ -9,6 +9,6 @@ const configure = (env, level) => {
     //             filename: './logs/' + env + '.log' 
     //         })
     //     ]
-    // });
+    // });//
 }
 module.exports = {configLogger: configure};
