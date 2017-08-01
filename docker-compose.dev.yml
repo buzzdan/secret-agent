@@ -1,0 +1,22 @@
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+      - "5859:5859"
+    links:
+      - mongo
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: npm run dev
+  mongo:
+    image: mongo
+    volumes:
+      - datavolume:/data/db
+    ports:
+      - "27017:27017"
+volumes:
+  datavolume: {}
+  node_modules: {}
