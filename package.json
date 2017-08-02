@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec app/**/*.spec.js",
-    "test-cov": "istanbul cover mocha --  --check-leaks app/**/*.spec.js",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha --  --check-leaks app/**/*.spec.js",
     "cov-cobertura": "istanbul report cobertura",
     "lint": "esw config/**/*.js app/**/*.js --color -f simple-detail",
     "start:logs": "pm2 logs",
