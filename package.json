@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
+    "lint": "esw config/**/*.js app/**/*.js --color -f simple-detail",
+    "watch:lint": "npm run lint -- --watch",
     "start:logs": "pm2 logs",
+    "start:env": "ncp .env.example .env --noclobber",
     "start:run": "pm2 start ecosystem.config.js",
     "start": "npm-run-all --parallel start:*",
-    "dev": "pm2-dev ecosystem.config.js",
+    "dev:run": "pm2-dev ecosystem.config.js",
+    "dev": "npm-run-all --parallel watch:* dev:run",
     "stop": "pm2 delete all",
     "setup": "node ./scripts/db-setup.js"
   },
@@ -37,5 +41,15 @@
     "request-promise-native": "^1.0.4",
     "spherical-geometry-js": "^1.0.1",
     "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-watch": "^3.1.2",
+    "ncp": "^2.0.0"
   }
 }

@@ -16,7 +16,7 @@ For the sample input (see db-setup script) input:
 So the result is Morocco with an isolation degree of 3.
 
 ## Endpoint: POST /find-closest
-	Body: { “target-location”: “[a address or geo coordinates]”
+	Body: { “target-location”: “[address or geo coordinates]”
 Will Find the closest and farthest missions from a specific address (it uses Google API for this)
 
 # How to run the service
