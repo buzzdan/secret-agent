@@ -2,7 +2,7 @@
 
 const joi = require('joi')
 
-require('dotenv-safe').load();
+require('dotenv-safe').load()
 const envVarsSchema = joi.object({
   NODE_ENV: joi.string()
     .allow(['development', 'production', 'test', 'provision'])
@@ -43,4 +43,4 @@ const config = {
   }
 }
 
-module.exports = config 
+module.exports = config
