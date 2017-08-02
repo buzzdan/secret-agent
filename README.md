@@ -21,6 +21,14 @@ Will Find the closest and farthest missions from a specific address (it uses Goo
 
 # How to run the service
 
+### Environment Variables Setup
+
+Create the following environemnt variables to make the project work:
+
+GEOCODE_API_KEY - Create an API key on [Google Developer Console](https://console.developers.google.com) for [Google Maps Geocoding API service](https://developers.google.com/maps/documentation/geocoding/intro)
+
+(you can create a .env file with the env variable)
+
 ## Docker
 
 For Production:
