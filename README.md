@@ -7,7 +7,7 @@ Good morning, agent. MI6 is trying to gather statistics about its missions. Yo
 
 An isolated agent is defined as an agent that participated in a single mission.this endpoint will find the most isolated country (the country with the highest degree of isolation).
 
-For the sample input (see db-setup script) input:
+For the sample input (see [db-setup script](https://github.com/danfromisrael/secret-agent/blob/master/scripts/db-setup.js)) input:
 
 - Brazil has 1 isolated agent (008) and 2 non-isolated agents (007, 005)
 - Poland has 2 isolated agents (011, 013) and one non-isolated agent (005)
@@ -20,6 +20,14 @@ So the result is Morocco with an isolation degree of 3.
 Will Find the closest and farthest missions from a specific address (it uses Google API for this)
 
 # How to run the service
+
+### Environment Variables Setup
+
+Create the following environemnt variables to make the project work:
+
+GEOCODE_API_KEY - Create an API key on [Google Developer Console](https://console.developers.google.com) for [Google Maps Geocoding API service](https://developers.google.com/maps/documentation/geocoding/intro)
+
+(you can create a .env file with the env variable)
 
 ## Docker
 
@@ -35,3 +43,10 @@ For Development:
 * Will activate shared volume of host directory inside the container
 * Watches the files as development takes place
 * Server restarts for each change
+
+Wanna just compose it and bash into the container without starting the service ?
+you got it!
+
+`docker-compose -f docker-compose.dev.yml run web bash`
+
+just go in there and do whatever you feel like -> you got full control
