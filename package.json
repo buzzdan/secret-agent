@@ -11,6 +11,7 @@
     "start:logs": "pm2 logs",
     "start:run": "pm2 start ecosystem.config.js",
     "start": "npm-run-all --parallel start:*",
+    "test:mutant-report": "stryker run stryker.conf.js",
     "watch:lint": "npm run lint -- --watch",
     "watch:test": "npm run test -- --watch",
     "dev:run": "pm2-dev ecosystem.config.js",
@@ -57,6 +58,11 @@
     "eslint-watch": "^3.1.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
-    "ncp": "^2.0.0"
+    "ncp": "^2.0.0",
+    "stryker": "^0.6.7",
+    "stryker-api": "^0.5.6",
+    "stryker-html-reporter": "^0.4.7",
+    "stryker-mocha-framework": "^0.1.4",
+    "stryker-mocha-runner": "^0.4.4"
   }
 }

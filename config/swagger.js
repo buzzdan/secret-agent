@@ -28,12 +28,12 @@ var swaggerSpec = swaggerJSDoc(options)
 
 const initSwaggerWith = app => {
   return new Promise((resolve, reject) => {
-
     // Serve swagger docs the way you like (Recommendation: swagger-tools)
     app.get('/api-docs.json', function (req, res) {
       res.setHeader('Content-Type', 'application/json')
       res.send(swaggerSpec)
     })
+
     // Initialize the Swagger middleware
     swaggerTools.initializeMiddleware(swaggerSpec, (middleware) => {
 
