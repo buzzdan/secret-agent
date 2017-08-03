@@ -7,7 +7,7 @@
     "test": "mocha --reporter spec app/**/*.spec.js",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha --  --check-leaks app/**/*.spec.js",
     "cov-cobertura": "istanbul report cobertura",
-    "lint": "esw config/**/*.js app/**/*.js --color -f simple-detail",
+    "lint": "esw config/**/*.js app/**/*.js --color",
     "start:logs": "pm2 logs",
     "start:run": "pm2 start ecosystem.config.js",
     "start": "npm-run-all --parallel start:*",
