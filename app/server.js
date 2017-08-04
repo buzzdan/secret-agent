@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const config = require('../config/config')
 const { configLogger } = require('../config/logger')

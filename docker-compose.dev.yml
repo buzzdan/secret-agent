@@ -17,6 +17,17 @@ services:
       - datavolume:/data/db
     ports:
       - "27017:27017"
+  elk:
+    image: sebp/elk
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+      - "10514:10514"
+    volumes:
+      - elk-data:/var/lib/elasticsearch
+      - ./logstash.conf:/etc/logstash/conf.d/03-tcp-input.conf
 volumes:
   datavolume: {}
   node_modules: {}
+  elk-data: {}

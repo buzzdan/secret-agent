@@ -43,9 +43,10 @@
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4",
     "spherical-geometry-js": "^1.0.1",
-    "winston": "^2.3.1",
     "swagger-jsdoc": "^1.9.7",
-    "swagger-tools": "^0.10.1"
+    "swagger-tools": "^0.10.1",
+    "winston": "^2.3.1",
+    "winston-logstash": "^0.3.0"
   },
   "devDependencies": {
     "chai": "^4.1.0",
