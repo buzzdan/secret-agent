@@ -27,6 +27,7 @@ services:
     volumes:
       - elk-data:/var/lib/elasticsearch
       - ./logstash.conf:/etc/logstash/conf.d/03-tcp-input.conf
+      - ./elk-output.conf:/etc/logstash/conf.d/30-output.conf
 volumes:
   datavolume: {}
   node_modules: {}
