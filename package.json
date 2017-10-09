@@ -14,8 +14,9 @@
     "test:mutant-report": "stryker run stryker.conf.js",
     "watch:lint": "npm run lint -- --watch",
     "watch:test": "npm run test -- --watch",
+    "health:elk": "wait-on http-get://elk:9200/_cluster/health",
     "dev:run": "pm2-dev ecosystem.config.js",
-    "dev": "npm-run-all --parallel watch:* dev:run",
+    "dev": "npm run health:elk && npm-run-all --parallel watch:* dev:run",
     "stop": "pm2 delete all",
     "setup": "node ./scripts/db-setup.js"
   },
@@ -45,6 +46,7 @@
     "spherical-geometry-js": "^1.0.1",
     "swagger-jsdoc": "^1.9.7",
     "swagger-tools": "^0.10.1",
+    "wait-on": "^2.0.2",
     "winston": "^2.3.1",
     "winston-logstash": "^0.3.0"
   },
